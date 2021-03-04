@@ -1,0 +1,66 @@
+mat-toolbar {
+  background: #0168B4;
+}
+
+.image-responsive {
+  height: auto;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.large-screen-options {
+  margin: 0px 20px;
+}
+
+.div-modulos, .div-logout {
+  color: white;
+  display: inline-block;
+  margin: 0px 25px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.button-modulos, .button-logout {
+  display: block;
+  margin: 0px 25px;
+}
+
+@media screen and (max-width: 599px) {
+  .image-responsive {
+    max-width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .large-screen-options {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  mat-toolbar {
+    height: 90px;
+  }
+
+  .image-responsive {
+    max-width: 20%;
+  }
+
+  .small-screen-options {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .image-responsive {
+    max-width: 15%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .image-responsive {
+    max-width: 10%;
+  }
+}
