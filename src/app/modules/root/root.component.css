@@ -17,7 +17,7 @@ mat-toolbar {
 .div-modulos, .div-logout {
   color: white;
   display: inline-block;
-  margin: 0px 25px;
+  margin: 0px 10px;
   text-align: center;
   font-size: 16px;
 }
@@ -27,40 +27,38 @@ mat-toolbar {
   margin: 0px 25px;
 }
 
+.label-modulos, .label-logout{
+  margin-top: -6px;
+  display: block;
+}
+
 @media screen and (max-width: 599px) {
   .image-responsive {
-    max-width: 40%;
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-responsive {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .large-screen-options {
+  .large-screen-options, .spacer {
     display: none;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 601px) {
   mat-toolbar {
     height: 90px;
   }
 
   .image-responsive {
-    max-width: 20%;
+    max-width: 180px;
   }
 
   .small-screen-options {
     display: none;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .image-responsive {
-    max-width: 15%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .image-responsive {
-    max-width: 10%;
   }
 }
