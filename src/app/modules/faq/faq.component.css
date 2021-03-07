@@ -1,0 +1,59 @@
+.container, mat-table {
+  background: #fafafa;
+}
+
+.container {
+  margin: 0px 40px;
+}
+
+mat-header-cell {
+  background: #0168B4;
+  color: white;
+}
+
+mat-header-cell, mat-cell {
+  margin-left: 2px;
+  justify-content: center;
+}
+
+mat-header-cell:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+mat-header-cell:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+mat-header-cell:first-child, mat-cell:first-child {
+  flex-grow: 7;
+  margin-left: 0px;
+  justify-content: right;
+}
+
+mat-cell:first-child {
+  columns: #303030;
+}
+
+mat-cell:nth-child(2) {
+  font-weight: bold;
+}
+
+mat-header-row {
+  border-bottom-width: 0px;
+}
+
+mat-row {
+  background: white;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  margin: 10px 0px;
+}
+
+.button-edit {
+  color: #0168B4;
+}
+
+.button-trash {
+  color: #DC3545;
+}

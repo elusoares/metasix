@@ -6,7 +6,7 @@ import { RootComponent } from './root/root.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/tabs',
     pathMatch: 'full'
   },
   {
@@ -14,6 +14,10 @@ const routes: Routes = [
     component: RootComponent,
     children: [
       {
+        path: 'tabs',
+        loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsModule)
+      }
+      /* {
         path: 'home',
         loadChildren: () => import('./home/home.module').then( m => m.HomeModule)
       },
@@ -28,7 +32,7 @@ const routes: Routes = [
       {
         path: 'categorias',
         loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasModule)
-      }
+      } */
     ]
   }
 ];

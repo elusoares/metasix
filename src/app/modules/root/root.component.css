@@ -1,3 +1,7 @@
+.container{
+  background: #fafafa;
+  height: 100%;
+}
 mat-toolbar {
   background: #0168B4;
 }
@@ -30,6 +34,18 @@ mat-toolbar {
 .label-modulos, .label-logout{
   margin-top: -6px;
   display: block;
+}
+
+.mat-tab-nav-bar, .mat-tab-header {
+  height: 10%;
+  border-bottom: 0px;
+  margin: 30px 0px;
+}
+
+.button-tab {
+  border-radius: 15px;
+  margin: 10px;
+  color: #303030;
 }
 
 @media screen and (max-width: 599px) {

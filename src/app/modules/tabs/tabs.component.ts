@@ -1,24 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
-// para usar as tabs, eu segui esse tutorial:
-// https://zoaibkhan.com/blog/angular-material-tabs-with-lazy-loaded-routes/
-
 export interface TabItem {
   label: string;
   route: string;
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './root.component.html',
-  styleUrls: ['./root.component.css']
+  selector: 'app-tabs',
+  templateUrl: './tabs.component.html',
+  styleUrls: ['./tabs.component.css']
 })
-
-export class RootComponent implements OnInit {
+export class TabsComponent implements OnInit {
   tabs: TabItem[];
-  constructor(
-
-  ) {
+  constructor() {
     this.tabs = [
       {
         label: 'HOME',
@@ -37,9 +31,10 @@ export class RootComponent implements OnInit {
         route: '/categorias'
       }
     ];
-   }
-
-  ngOnInit(): void {
 
   }
+
+  ngOnInit(): void {
+  }
+
 }

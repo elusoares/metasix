@@ -1,22 +1,35 @@
-<mat-toolbar>
-  <img class="image-responsive" src="/assets/images/logo.png" alt="Nature">
-  <span class="spacer"></span>
-  <div class="large-screen-options">
-    <div class="div-modulos">
-      <button mat-icon-button class="button-modulos">
-        <mat-icon class="fas fa-th"></mat-icon>
-      </button>
-      <label class="label-modulos">Módulos</label>
+<div class="container">
+  <mat-toolbar>
+    <img class="image-responsive" src="/assets/images/logo.png" alt="Nature">
+    <span class="spacer"></span>
+    <div class="large-screen-options">
+      <div class="div-modulos">
+        <button mat-icon-button class="button-modulos">
+          <mat-icon class="fas fa-th"></mat-icon>
+        </button>
+        <label class="label-modulos">Módulos</label>
+      </div>
+      <div class="div-logout">
+        <button mat-icon-button class="button-logout">
+          <mat-icon class="fas fa-sign-out-alt"></mat-icon>
+        </button>
+        <label class="label-logout">Log Out</label>
+      </div>
     </div>
-    <div class="div-logout">
-      <button mat-icon-button class="button-logout">
-        <mat-icon class="fas fa-sign-out-alt"></mat-icon>
-      </button>
-      <label class="label-logout">Log Out</label>
+    <div class="small-screen-options">
     </div>
-  </div>
-  <div class="small-screen-options">
+  </mat-toolbar>
+  <nav mat-tab-nav-bar mat-align-tabs="start">
+    <button mat-raised-button mat-tab-link *ngFor="let tabItem of tabs"
+      [routerLink]="tabItem.route"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [ngStyle]="rla.isActive ? {'background': '#0168B4'} : {'background': 'white'}"
+      class="button-tab"
+    >
+      {{tabItem.label}}
+    </button>
+  </nav>
+  <router-outlet></router-outlet>
 
-  </div>
-</mat-toolbar>
-<router-outlet></router-outlet>
+</div>

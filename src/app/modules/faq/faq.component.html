@@ -1,1 +1,36 @@
-<p>faq works!</p>
+<div class="container">
+  <mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="pergunta">
+      <mat-header-cell *matHeaderCellDef> Pergunta </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.pergunta}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ordem">
+      <mat-header-cell *matHeaderCellDef> Ordem </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ordem}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+      <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-icon-button class="button-edit">
+          <mat-icon class="fas fa-edit"></mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="excluir">
+      <mat-header-cell *matHeaderCellDef> Excluir </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-icon-button class="button-trash">
+          <mat-icon class="fas fa-trash"></mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+    <mat-row mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>
