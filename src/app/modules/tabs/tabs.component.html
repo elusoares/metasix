@@ -1,1 +1,15 @@
-<p>tabs works!</p>
+<div class="tabs-container">
+  <nav mat-tab-nav-bar mat-align-tabs="start">
+    <button mat-raised-button mat-tab-link *ngFor="let tabItem of tabs"
+      [routerLink]="tabItem.route"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [ngStyle]="rla.isActive ? {'background': '#0168B4'} : {'background': 'white'}"
+      class="button-tab"
+    >
+      {{tabItem.label}}
+    </button>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

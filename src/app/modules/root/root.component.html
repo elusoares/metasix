@@ -1,4 +1,4 @@
-<div class="container">
+<div class="root-container">
   <mat-toolbar>
     <img class="image-responsive" src="/assets/images/logo.png" alt="Nature">
     <span class="spacer"></span>
@@ -19,17 +19,7 @@
     <div class="small-screen-options">
     </div>
   </mat-toolbar>
-  <nav mat-tab-nav-bar mat-align-tabs="start">
-    <button mat-raised-button mat-tab-link *ngFor="let tabItem of tabs"
-      [routerLink]="tabItem.route"
-      routerLinkActive
-      #rla="routerLinkActive"
-      [ngStyle]="rla.isActive ? {'background': '#0168B4'} : {'background': 'white'}"
-      class="button-tab"
-    >
-      {{tabItem.label}}
-    </button>
-  </nav>
+
   <router-outlet></router-outlet>
 
 </div>
