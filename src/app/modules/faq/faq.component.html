@@ -1,8 +1,29 @@
 <div class="faq-container">
+  <div class="div-title">
+    <h1>FAQ - Perguntas Frequentes</h1>
+    <span class="spacer"></span>
+    <div class="div-search">
+      <mat-form-field class="search-field" appearance="outline">
+        <!-- <mat-label>Filter</mat-label> -->
+        <input matInput placeholder="Busque por termo..." #input>
+      </mat-form-field>
+      <button mat-flat-button class="button-search">
+        <mat-icon class="fas fa-search plus-icon"></mat-icon>
+        Nova Pergunta
+      </button>
+    </div>
+  </div>
   <mat-table [dataSource]="dataSource">
 
     <ng-container matColumnDef="pergunta">
-      <mat-header-cell *matHeaderCellDef> Pergunta </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef>
+        Pergunta
+        <span class="spacer"></span>
+        <button mat-flat-button class="button-add">
+          <mat-icon class="fas fa-plus-circle plus-icon"></mat-icon>
+          Nova Pergunta
+        </button>
+      </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.pergunta}} </mat-cell>
     </ng-container>
 

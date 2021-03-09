@@ -5,6 +5,7 @@
 mat-header-cell {
   background: #0168B4;
   color: white;
+  font-size: 14px;
 }
 
 mat-header-cell, mat-cell {
@@ -15,6 +16,7 @@ mat-header-cell, mat-cell {
 mat-header-cell:first-child {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  padding-right: 24px;
 }
 
 mat-header-cell:last-child {
@@ -28,8 +30,13 @@ mat-header-cell:first-child, mat-cell:first-child {
   justify-content: right;
 }
 
-mat-cell:first-child {
-  columns: #303030;
+h1 {
+  font-weight: bold;
+  /* margin: 0px; */
+}
+
+h1, mat-cell:first-child {
+  color: #303030;
 }
 
 mat-cell:nth-child(2) {
@@ -48,6 +55,59 @@ mat-row {
 
 mat-header-row, mat-row {
   min-height: 40px;
+}
+
+.spacer {
+  flex: 1 1 30%;
+}
+
+.div-title {
+  display: flex;
+  align-items: center;
+}
+
+.div-search {
+  display: flex;
+  font-size: 8px;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.mat-form-field {
+  margin-right: 12px;
+  flex-grow: 2;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+mat-form-field .mat-input-element {
+  font: caption;
+  font-size: 14px;
+}
+
+#input {
+  border-radius: 15px;
+}
+
+.button-add {
+  line-height: normal;
+  padding: 0px;
+}
+
+.button-add, .button-search {
+  background: #0168B4;
+  color: white;
+}
+
+.button-search {
+  border-radius: 15px;
+}
+
+.plus-icon {
+  margin-right: 7px;
 }
 
 .button-edit {

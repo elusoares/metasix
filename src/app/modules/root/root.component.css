@@ -18,17 +18,19 @@ mat-toolbar {
   margin: 0px 20px;
 }
 
-.div-modulos, .div-logout {
+/* .div-modulos, .div-logout {
   color: white;
   display: inline-block;
   margin: 0px 10px;
   text-align: center;
   font-size: 16px;
-}
+} */
 
 .button-modulos, .button-logout {
-  display: block;
-  margin: 0px 25px;
+  display: inline-block;
+  background: #0168B4;
+  color: white;
+  margin: 0px 5px;
 }
 
 .label-modulos, .label-logout{

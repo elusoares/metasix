@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-
 import { Resultado, PesquisasService } from 'src/app/core/services/pesquisas.service';
 import { Row } from './row';
 
@@ -36,7 +35,7 @@ export class FaqComponent implements OnInit {
     this.rows = new Array();
     this.pesquisasService.getPesquisas().subscribe((res) => {
       this.pesquisas = res;
-      console.log(res);
+      // console.log(res);
       for (let r of res) {
         this.rows.push(new Row(r.question, r.position, 'editar', 'excluir'));
       }
